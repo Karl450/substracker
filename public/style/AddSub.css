@@ -1,0 +1,16 @@
+.AddButton {
+    padding: 15px 70px;
+    border: none; /* Remove the border */
+    border-radius: 10px;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    outline: none;
+}
+
+.AddButton:hover {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+}
