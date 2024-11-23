@@ -1,21 +1,26 @@
 import { useState } from 'react';
-import '../../public/style/AddSub.css';
+import SubPopup from './SubPopup';
 
-export default function AddSub({oneSub}) {
+export default function AddSub() {
 
-    const [sub, setSub] = useState('');
+    const [popupVisible, setPopupVisible] = useState(false);
 
-    //need to change this next time
+
     const handleSubscription = (e) => {
-        setSub(oneSub)
+        setPopupVisible(!popupVisible)
         e.preventDefault();
     }
 
+    const closePopup = () => {
+        setPopupVisible(false);
+    };
+
     return (
         <>
-            <form className="" onSubmit={handleSubscription}>
-                <button className="AddButton">Add Subscription</button>
-            </form>
+            <div>
+                <button className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" onClick={handleSubscription}>Add Subscription</button>
+                { popupVisible && <SubPopup onClose={closePopup}/> }
+            </div>
         </>
     )
 } 

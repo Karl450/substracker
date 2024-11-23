@@ -1,5 +1,6 @@
-export default function CostTracker( {total} ) {
+export default function CostTracker({ total }) {
+
     return (
-        <h1>Total Monthly: {total}$</h1>
+        <h1 className="text-2xl tracking-tighter font-extrabold text-yellow-500">Total Monthly: {total.toFixed(2)}$</h1>
     )
 }
